@@ -4,7 +4,7 @@ html{
 }
 
 body{
-   height: 200px;
+   height: 150px;
    min-width: 600px; 
    padding: 5px;
    background-color: pink;
@@ -37,6 +37,7 @@ button{
 #add-el, #delete-el{
     font-size: 16px;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 #delete-el{
