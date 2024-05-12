@@ -10,15 +10,6 @@ if (leadsFromLocalStorage){
     renderActivities()
 }
 
-addEl.addEventListener('click', function(){
-    if(todoInput.value != ''){
-        activities.push(todoInput.value)
-        localStorage.setItem('activities', JSON.stringify(activities))
-        todoInput.value = ''
-        renderActivities()
-        }
-})
-
 function renderActivities(){
     let activitiesHtml = ''
     for(let i = 0; i < activities.length; i++){
@@ -28,6 +19,15 @@ function renderActivities(){
         toDoList.innerHTML = activitiesHtml
         
 }
+
+addEl.addEventListener('click', function(){
+    if(todoInput.value != ''){
+        activities.push(todoInput.value)
+        localStorage.setItem('activities', JSON.stringify(activities))
+        todoInput.value = ''
+        renderActivities()
+        }
+})
 
 deleteEl.addEventListener('dblclick', function(){
     localStorage.clear()
