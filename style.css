@@ -8,6 +8,7 @@ body{
    min-width: 600px; 
    padding: 5px;
    background-color: pink;
+   border-radius: 10px;
 }
 
 h1{
