@@ -1,0 +1,48 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   height: 200px;
+   min-width: 600px; 
+   padding: 5px;
+   background-color: pink;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-color: bisque;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button{
+    padding: 5px;
+    width: 20%;
+    border: 2px solid fuchsia;
+    border-radius: 20%;
+    background-color: blanchedalmond;
+}
+
+#add-el, #delete-el{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#delete-el{
+    background-color: salmon;
+}
+
+button:hover{
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.activity{
+    font-size: 18px;
+}
