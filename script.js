@@ -16,12 +16,16 @@ function renderActivities(){
         activitiesHTML += `
         <div class="activity">
         <div class="activity-text">${activities[i]}</div>
-        <div class="activity-delete">Done</div>
+        <button class="activity-delete" onclick="Done()">Done</button>
         </div>
         `
         }
         toDoList.innerHTML = activitiesHTML
 
+}
+function Done(){
+    activities.splice(0,1)
+    renderActivities()
 }
 
 addEl.addEventListener('click', () =>{
