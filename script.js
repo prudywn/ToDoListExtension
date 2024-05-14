@@ -20,6 +20,7 @@ function renderActivities(){
         </div>
         `
         }
+        toDoList.innerHTML = activitiesHTML
 
 }
 
@@ -29,13 +30,14 @@ addEl.addEventListener('click', () =>{
         alert('Please enter a todo')
         } else {
             activities.push(todoValue)
+            localStorage.setItem('activities', JSON.stringify(activities))
             todoInput.value = ''
             renderActivities()
             }
 
 })
 
-deleteEl.addEventListener('click', () =>{
+deleteEl.addEventListener('dblclick', () =>{
     activities = []
     renderActivities()
     localStorage.clear()
