@@ -25,8 +25,10 @@ function renderActivities(){
 
 }
 function Done(){
-    activities.splice(0,1)
+    activities.splice(activities.indexOf(this), 1)
+    localStorage.setItem('activities', JSON.stringify(activities))
     renderActivities()
+    
 }
 
 addEl.addEventListener('click', () =>{
@@ -39,7 +41,7 @@ addEl.addEventListener('click', () =>{
             todoInput.value = ''
             renderActivities()
             }
-      Done()      
+        
 
 })
 
