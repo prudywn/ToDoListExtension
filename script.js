@@ -4,34 +4,40 @@ const todoInput = document.getElementById('todoInput')
 const addEl = document.getElementById('add-el')
 const deleteEl = document.getElementById('delete-el')
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem('activities'))
-
-if (leadsFromLocalStorage){
+// console.log(leadsFromLocalStorage)
+if (leadsFromLocalStorage) {
     activities = leadsFromLocalStorage
     renderActivities()
 }
 
 function renderActivities(){
-    let activitiesHtml = ''
-    for(let i = 0; i < activities.length; i++){
-        activitiesHtml += `<li>${activities[i]} 
-        </li>`
+    let activitiesHTML = ''
+    for (let i = 0; i < activities.length; i++) {
+        activitiesHTML += `
+        <div class="activity">
+        <div class="activity-text">${activities[i]}</div>
+        <div class="activity-delete">Done</div>
+        </div>
+        `
         }
-        toDoList.innerHTML = activitiesHtml
-        
+
 }
 
-addEl.addEventListener('click', function(){
-    if(todoInput.value != ''){
-        activities.push(todoInput.value)
-        localStorage.setItem('activities', JSON.stringify(activities))
-        todoInput.value = ''
-        renderActivities()
-        }
+addEl.addEventListener('click', () =>{
+    let todoValue = todoInput.value
+    if(todoValue === '') {
+        alert('Please enter a todo')
+        } else {
+            activities.push(todoValue)
+            todoInput.value = ''
+            renderActivities()
+            }
+
 })
 
-deleteEl.addEventListener('dblclick', function(){
-    localStorage.clear()
+deleteEl.addEventListener('click', () =>{
     activities = []
     renderActivities()
+    localStorage.clear()
 
 })
