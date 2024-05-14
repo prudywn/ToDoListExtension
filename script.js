@@ -16,7 +16,7 @@ function renderActivities(){
         activitiesHTML += `
         <div class="activity">
         <div class="activity-text">${activities[i]}
-        <button class="activity-delete" onclick="Done()">Done</button>
+        <button class="activity-delete" onclick="Done()">X</button>
         </div>
         </div>
         `
@@ -39,6 +39,7 @@ addEl.addEventListener('click', () =>{
             todoInput.value = ''
             renderActivities()
             }
+      Done()      
 
 })
 
