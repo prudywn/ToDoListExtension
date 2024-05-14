@@ -15,8 +15,9 @@ function renderActivities(){
     for (let i = 0; i < activities.length; i++) {
         activitiesHTML += `
         <div class="activity">
-        <div class="activity-text">${activities[i]}</div>
+        <div class="activity-text">${activities[i]}
         <button class="activity-delete" onclick="Done()">Done</button>
+        </div>
         </div>
         `
         }
